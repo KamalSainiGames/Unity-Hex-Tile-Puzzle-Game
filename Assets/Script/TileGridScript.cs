@@ -7,7 +7,7 @@ public class TileGridScript : MonoBehaviour
     [SerializeField] private int columns = 5;
     [SerializeField] private RectTransform container;
     [SerializeField] private GameObject hexTilePrefab;
-    [SerializeField] private Vector2 spacing = new Vector2(5f, 5f);
+    [SerializeField] private Vector2 spacing = new Vector2(-8f, -5f);
 
     private void Start()
     {
@@ -57,7 +57,7 @@ public class TileGridScript : MonoBehaviour
 
                 // Hex position
                 Vector2 position = new Vector2(gridOrigin.x + rowOffset + col * (tileSize.x + spacing.x) +
-                    tileSize.x * 0.5f, gridOrigin.y - row * (tileSize.y * 0.75f) - tileSize.y * 0.5f);
+                    tileSize.x * 0.5f, gridOrigin.y - row * (tileSize.y * 0.82f) - tileSize.y * 0.5f);
 
                 rect.anchoredPosition = position;
 
