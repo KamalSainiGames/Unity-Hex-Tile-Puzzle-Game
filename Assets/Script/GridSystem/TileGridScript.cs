@@ -1,7 +1,10 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class TileGridScript : MonoBehaviour
 {
+    public static List<TileScript> AllTiles = new List<TileScript>();
+    
     [Header("References")]
     [SerializeField] private int rows = 5;
     [SerializeField] private int columns = 5;
@@ -16,6 +19,8 @@ public class TileGridScript : MonoBehaviour
 
     private void GenerateGrid()
     {
+        AllTiles.Clear();
+        
         // Clear old tiles
         foreach (Transform child in container)
         {
@@ -49,6 +54,13 @@ public class TileGridScript : MonoBehaviour
             {
                 GameObject tile = Instantiate(hexTilePrefab, container, false);
 
+                TileScript tileScript = tile.GetComponent<TileScript>();
+
+                tileScript.Row = row;
+                tileScript.Col = col;
+             
+                AllTiles.Add(tileScript);
+
                 RectTransform rect = tile.GetComponent<RectTransform>();
 
                 rect.anchorMin = rect.anchorMax = rect.pivot = new Vector2(0.5f, 0.5f);
@@ -65,4 +77,6 @@ public class TileGridScript : MonoBehaviour
             }
         }
     }
+
+ 
 }

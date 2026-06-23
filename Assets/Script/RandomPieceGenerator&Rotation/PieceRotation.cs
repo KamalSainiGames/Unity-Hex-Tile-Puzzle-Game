@@ -7,6 +7,7 @@ public class PieceRotation : MonoBehaviour, IPointerClickHandler
     public RectTransform hexB;
 
     private int rotationIndex = 0;
+    public int RotationIndex => rotationIndex;
 
     private Vector2[] hexAPos =
     {
@@ -28,10 +29,7 @@ public class PieceRotation : MonoBehaviour, IPointerClickHandler
         new Vector2(-40,60)
     };
 
-    private void Start()
-    {
-        ApplyRotation();
-    }
+  
 
     public void RotatePiece()
     {
@@ -47,6 +45,10 @@ public class PieceRotation : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        RotatePiece();
+        if (!PieceDrag.IsDrag)
+        {
+            RotatePiece();
+        }
+      
     }
 }

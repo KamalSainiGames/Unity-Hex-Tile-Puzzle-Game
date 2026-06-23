@@ -472,6 +472,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7840580286568219420}
   - component: {fileID: 8261819821042631670}
+  - component: {fileID: 3242852567305898031}
+  - component: {fileID: 8277945751750414254}
   m_Layer: 5
   m_Name: HexPiecePrefab
   m_TagString: Untagged
@@ -514,5 +516,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firstNumber: 0
   secondNumber: 0
+  hexa: {r: 0, g: 0, b: 0, a: 0}
+  hexb: {r: 0, g: 0, b: 0, a: 0}
   num1text: {fileID: 2365244584020620824}
   num2text: {fileID: 5622863485331672976}
+  HexAImage: {fileID: 1727021574124853630}
+  HexBImage: {fileID: 6500995702501579656}
+--- !u!114 &3242852567305898031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5959284806909057513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecc2da5b65524de4bb2674bb3e012ef1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hexA: {fileID: 7772120680032839850}
+  hexB: {fileID: 969009226102455425}
+--- !u!114 &8277945751750414254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5959284806909057513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4224f9ad4fb475244963a00c7e1baf7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dragOffsetY: 80
